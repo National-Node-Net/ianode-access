@@ -25,3 +25,13 @@ updates:
     target-branch: "develop"
     schedule:
       interval: "weekly"
+
+  - package-ecosystem: "docker-compose"
+    directories:
+      - "/"
+      - "/docker-compose"
+      - "/keyclock-local"
+      - "/cognito-local"
+    target-branch: "develop"
+    schedule:
+      interval: "weekly"
