@@ -20,7 +20,7 @@
   #  © Crown Copyright 2026. This work has been developed by the National Digital Twin Programme
   #  and is legally attributed to the UK's Department for Business, Innovation, Science and Trade (BIST) as the governing entity.
 
-FROM node:20-alpine3.20 AS installation
+FROM node:24-alpine3.20 AS installation
 
 WORKDIR /app
 ENV PATH /app/node_modules/.bin:$PATH
@@ -33,7 +33,7 @@ COPY .babelrc .babelrc
 
 RUN LOCAL_MACHINE=false yarn build
 
-FROM node:20-alpine3.20
+FROM node:24-alpine3.20
 # Install curl
 RUN apk --no-cache add curl
 WORKDIR /app
